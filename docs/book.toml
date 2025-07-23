@@ -3,4 +3,7 @@ authors = ["yguenduez"]
 language = "en"
 multilingual = false
 src = "src"
-title = "docs"
+title = "Embedded Workshop 4"
+
+[output.html]
+git-repository-url = "https://github.com/rust-basel/embedded-workshop-4"
