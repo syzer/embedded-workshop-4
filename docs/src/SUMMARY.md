@@ -8,3 +8,4 @@
 - [Let's write a simple embassy project](let-s-write-a-simple-embassy-project.md)
 - [Let's write another embassy project](let-s-write-another-embassy-project.md)
 - [Other Embedded Frameworks](other-embedded-frameworks.md)
+- [Sources](sources.md)
