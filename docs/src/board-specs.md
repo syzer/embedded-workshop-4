@@ -13,3 +13,8 @@ We use the ESP32-C3 from seeedstudio.
 ## Pin Layout
 
 ![alt image](assets/pin_layout.png)
+
+## Where do you get the boards from:
+
+- [reichelt.com](https://www.reichelt.com/ch/en/shop/product/xiao_esp32c3_wifi_bt_without_header-358356)
+- [bastelgarage.ch](https://www.bastelgarage.ch/seeed-studio-xiao-esp32-c3-1-2526?search=esp32c3)
