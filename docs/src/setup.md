@@ -29,10 +29,16 @@ rustup target add riscv32imc-unknown-none-elf
 
 This is the recommended tool for flashing and and interacting (e.g. debugging) with the ESP32-C3.
 
-NOTE: If you are on debian based-linux
+NOTE: Package installation for different Linux distributions:
 
+**Debian/Ubuntu:**
 ```sh
 sudo apt install -y pkg-config libudev-dev cmake git
+```
+
+**Fedora:**
+```sh
+sudo dnf install -y pkgconfig systemd-devel cmake git
 ```
 
 
