@@ -23,7 +23,10 @@ while let Some(top) = stack.pop() {
 
 **a.** Declare a mutable variable `counter`, initialize it to `0`, and increment it in a loop until it reaches `10`.
 
-```rust, editable
+```rust,editable
+fn main() {
+    println!("hello");
+}
 ```
 
 <details>
