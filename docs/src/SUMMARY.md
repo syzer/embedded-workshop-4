@@ -10,3 +10,5 @@
 - [Let's write another embassy project](let-s-write-another-embassy-project.md)
 - [Other Embedded Frameworks](other-embedded-frameworks.md)
 - [Sources](sources.md)
+
+- [Example Chapter Mini Exercises](example-chapter-mini-exercises.md)
