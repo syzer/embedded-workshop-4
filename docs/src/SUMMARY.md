@@ -1,6 +1,7 @@
 # Summary
 
 - [Setup](setup.md)
+- [Board Specs](board-specs.md)
 - [How does embedded look like?](how-embedded-looks-like.md)
 - [Overview on embedded architecture](overview-on-embedded-architecture.md)
 - [Great Crates for embedded development](great-crates-for-embedded-development.md)
