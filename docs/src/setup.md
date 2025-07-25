@@ -31,6 +31,11 @@ This is the recommended tool for flashing and and interacting (e.g. debugging) w
 
 NOTE: Package installation for different Linux distributions:
 
+**udev rules:**
+
+Follow: https://probe.rs/docs/getting-started/probe-setup/#linux%3A-udev-rules
+
+
 **Debian/Ubuntu:**
 ```sh
 sudo apt install -y pkg-config libudev-dev cmake git
