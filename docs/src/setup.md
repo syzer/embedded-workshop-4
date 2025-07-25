@@ -64,18 +64,6 @@ You can see all the other options you can use to generate a project [here](https
 
 ## Flashing
 
-TODO: defmt is for some reason not working on the esp32c3
-
 ```sh
-export DEFMT_LOG=info
 cargo run --release
 ```
-
-TODO: Also rtt has be exchanged with `defmt-rtt`.
-and
-
-```rust
-use defmt_rtt as _;
-```
-
-to be added in the main.rs file.
