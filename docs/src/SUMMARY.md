@@ -3,7 +3,7 @@
 - [Setup](setup.md)
 - [Board Specs](board-specs.md)
 - [How does embedded look like?](how-embedded-looks-like.md)
-- [Overview on embedded architecture](overview-on-embedded-architecture.md)
+- [Overview on embedded software](overview-on-embedded-software.md)
 - [Great Crates for embedded development](great-crates-for-embedded-development.md)
 - [Let's write a blinky project](let-s-write-a-blinky-project.md)
 - [Key Concepts of embassy](key-concepts-of-embassy.md)
