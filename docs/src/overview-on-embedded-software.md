@@ -6,7 +6,18 @@
 - The drivers depend on the embedded_hal
 - embedded_hal(_async): for platform agnostic drivers
 - Your specific board—that implements the embedded_hal traits. For example esp_hal.
-- PACs: The peripheral access crate is a safe rust wrapper around low level memory mapped registers. They are generated from System View Descriptions (SVD) files, describing the register map for each peripheral (GPIO, ADC, I2C etc.). SVDs are given from the manufacturer.
+- Sometimes there is a board support crate, with higher level of abstraction than the one of the HAL.
+- PACs: The peripheral access crate is a safe rust wrapper around low level memory mapped registers. Generated from System View Descriptions (SVD) files, describing the register map for each peripheral (GPIO, ADC, I2C etc.). SVDs are given from the manufacturer.
+
+## Layers of Abstraction
+From [Comprehensive Rust](https://google.github.io/comprehensive-rust/bare-metal.html)
+
+Showcasing setting a pin high and low - with highest level of abstraction to lowest
+
+- [With Board Support Crate](https://google.github.io/comprehensive-rust/bare-metal/microcontrollers/board-support.html)
+- [With HAL](https://google.github.io/comprehensive-rust/bare-metal/microcontrollers/hals.html)
+- [With PAC](https://google.github.io/comprehensive-rust/bare-metal/microcontrollers/pacs.html)
+- [Raw writing/reading of memory mapped IO](https://google.github.io/comprehensive-rust/bare-metal/microcontrollers/mmio.html)
 
 ## What's a Hardware Abstraction Layer (HAL)?
 
