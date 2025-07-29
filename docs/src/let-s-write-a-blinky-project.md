@@ -1,5 +1,22 @@
 # Let's write a blinky project
 
-TODO: Sample (embassy) project - that does something more
+Your task is now to create a small program, that sets the GPIO10 to `high` and back `low` in a loop in order to let your LED blink.
 
-We could use some of the [example beginner applications](https://docs.espressif.com/projects/rust/book/writing-your-own-application/nostd.html) from the rust esp book
+Before you connect your LED, make sure its connected to a 330 OHM resitor. Otherwise it will drain
+too much current from your board.
+
+Reminder: You start a new esp project with
+
+```sh
+esp-generate --chip esp32c3 --headless -o probe-rs -o defmt <name of your project>
+```
+
+And
+
+```sh
+cargo run --release
+```
+
+to flash and run it.
+
+If you want are stuck, or want to see the solution: See `code/blinky`. In the root of the embedded-workshop.
