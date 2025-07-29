@@ -10,3 +10,5 @@
 - [Other Embedded Frameworks](other-embedded-frameworks.md)
 - [Great Crates for embedded development](great-crates-for-embedded-development.md)
 - [Sources](sources.md)
+
+- [Example Chapter Mini Exercises](example-chapter-mini-exercises.md)

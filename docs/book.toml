@@ -7,3 +7,4 @@ title = "Embedded Workshop 4"
 
 [output.html]
 git-repository-url = "https://github.com/rust-basel/embedded-workshop-4"
+playground.editable = true
