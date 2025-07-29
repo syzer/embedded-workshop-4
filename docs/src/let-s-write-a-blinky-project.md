@@ -2,8 +2,8 @@
 
 Your task is now to create a small program, that sets the GPIO10 to `high` and back `low` in a loop in order to let your LED blink.
 
-Before you connect your LED, make sure its connected to a 330 OHM resitor. Otherwise it will drain
-too much current from your board.
+Before you connect your LED, make sure its connected to a 330 OHM resistor. Otherwise the LED will drain
+too much current from your board and could potentially damage it.
 
 Reminder: You start a new esp project with
 
