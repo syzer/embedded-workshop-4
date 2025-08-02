@@ -4,6 +4,7 @@
 - [Board Specs](board-specs.md)
 - [Overview on embedded software](overview-on-embedded-software.md)
 - [Let's write a blinky project](let-s-write-a-blinky-project.md)
+- [Let's detect a button press](let-s-detect-a-button-press.md)
 - [Key Concepts of embassy](key-concepts-of-embassy.md)
 - [Let's write a simple embassy project](let-s-write-a-simple-embassy-project.md)
 - [Let's write another embassy project](let-s-write-another-embassy-project.md)
