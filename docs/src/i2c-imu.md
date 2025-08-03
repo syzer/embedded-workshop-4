@@ -137,4 +137,4 @@ let i2c = I2c::new(peripherals.I2C0, i2c_config)
 
 If you get totally lost, we provided you a possible solution at `code/i2c_imu`, where calibrate the IMU and read the sensor data. You can also use this one, if you want to continue building something bigger on it.
 
-You can also ask us your other for help!
+You can also ask us and others for help!
