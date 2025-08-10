@@ -133,4 +133,46 @@ cargo run --release
 
 ## Interrupts in Embassy
 
-TODO: Interrupts in [embassy](https://embassy.dev/book/#_async_version)
+Comparing interrupts with _normal_ bare metal, interrupts in embassy are quite easy.
+
+Embassy directly gives you methods, where you can `await` for example a falling edge of a given button.
+
+```rust
+#[embassy_executor::task]
+async fn my_interrupt_awaiting_task(mut input_button: Input<'static>) {
+    loop {
+        info!("Waiting for a button press");
+        // I.E.: When we press the button, the edge will fall
+        input_button.wait_for_falling_edge().await;
+        info!("I got woken up!")
+    }
+}
+```
+
+The task will be woken up, when we detect a falling edge on that button. This happens, when pressing it, given the following config of the button:
+
+```rust
+// Configure GPIO9 as input with pull-up resistor
+let config = InputConfig::default().with_pull(Pull::Up);
+let button = Input::new(peripherals.GPIO9, config);
+
+spawner
+    .spawn(my_interrupt_awaiting_task(button))
+    .expect("Could not spawn this task");
+```
+
+You can try it out youself. The code is `code/embassy_interrupt`.
+Run
+
+```sh
+cargo run --release
+```
+
+to build, flash and run it.
+
+## More to embassy
+
+If you are interested, what else embassy can do you can have a look at the
+
+- [book](https://embassy.dev/book/)
+- [esp embassy examples](https://github.com/esp-rs/esp-hal/tree/main/examples/src/bin)
