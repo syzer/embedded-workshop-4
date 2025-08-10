@@ -18,3 +18,4 @@ We use the ESP32-C3 from seeedstudio.
 
 - [reichelt.com](https://www.reichelt.com/ch/en/shop/product/xiao_esp32c3_wifi_bt_without_header-358356)
 - [bastelgarage.ch](https://www.bastelgarage.ch/seeed-studio-xiao-esp32-c3-1-2526?search=esp32c3)
+- [berrybase.ch](https://www.berrybase.ch/seeed-xiao-esp32c3-winziges-mcu-board-mit-wlan-und-ble)
