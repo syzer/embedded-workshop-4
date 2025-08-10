@@ -48,6 +48,7 @@ async fn button_task(button: Input<'static>) {
     loop {
         let current_state = button.is_high();
 
+        // We only send an event, if the button state changed
         if last_state != current_state {
             if current_state {
                 info!("Button released");
