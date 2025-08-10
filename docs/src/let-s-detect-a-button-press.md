@@ -106,7 +106,3 @@ cargo run --release
 
 You should see the something, if you added an `info!(...)` print
 to your interrupt function, if you click the boot button.
-
-## TODO: The embassy interrupt way and polling way: Show how much easier this is :)
-
-TODO: do an embassy polling and interrupt example
