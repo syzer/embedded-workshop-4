@@ -118,6 +118,12 @@ use the master branch of it. Atleast this version complies to `embedded-hal` >= 
 We recommed to go for the _mpu6050-dmp_ crate, as it provides a more complete examples and
 also supports asynchronous operations.
 
+E.g. Installing the `mpu6050-dmp` crate
+
+```sh
+cargo add mpu6050-dmp -F async -F defmt-03
+```
+
 </details>
 
 <details>
@@ -135,6 +141,6 @@ let i2c = I2c::new(peripherals.I2C0, i2c_config)
 
 </details>
 
-If you get totally lost, we provided you a possible solution at `code/i2c_imu`, where we calibrate the IMU and read the sensor data. You can also use this one, if you want to continue building something bigger on it.
+If you get totally lost, we provided you a possible solution at `code/i2c_imu` (esp32s3) or `code/i2c_imu_c3` (esp32c3), where we calibrate the IMU and read the sensor data. You can also use this one, if you want to continue building something bigger on it.
 
 You can also ask us and others for help!
