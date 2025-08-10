@@ -141,6 +141,6 @@ let i2c = I2c::new(peripherals.I2C0, i2c_config)
 
 </details>
 
-If you get totally lost, we provided you a possible solution at `code/i2c_imu` (esp32s3) or `code/i2c_imu_c3` (esp32c3), where we calibrate the IMU and read the sensor data. You can also use this one, if you want to continue building something bigger on it.
+If you get totally lost, we provided you a possible solution at `code/i2c_imu_s3` (esp32s3) or `code/i2c_imu_c3` (esp32c3), where we calibrate the IMU and read the sensor data. You can also use this one, if you want to continue building something bigger on it.
 
 You can also ask us and others for help!
