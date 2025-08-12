@@ -89,6 +89,11 @@ cargo add <crate-you-found>
 
 You will find plenty of examples in the crates you chose to for this project.
 
+**Note**: If happen to have an IMU like shown in the image below - those hang up, if you calibrate them.
+Just leave the calibration out, reading values works.
+
+![Not calibratable](assets/bad_ones.jpeg)
+
 Netherless: here are some hints, if you get stuck somewhere:
 
 <details>
