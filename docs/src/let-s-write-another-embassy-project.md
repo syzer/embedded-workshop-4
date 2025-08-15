@@ -1,1 +1,1 @@
-# Let's write a another embassy project
+# Let's write another embassy project
