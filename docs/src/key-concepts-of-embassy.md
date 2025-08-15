@@ -176,3 +176,44 @@ If you are interested, what else embassy can do you can have a look at the
 
 - [book](https://embassy.dev/book/)
 - [esp embassy examples](https://github.com/esp-rs/esp-hal/tree/main/examples/src/bin)
+
+## Other Embedded Framworks
+
+### RTIC - Realtime interrupt driven concurrency
+
+[RTIC](https://rtic.rs)
+
+You describe everything in an app module - where you define your `local` and `shared` ressources.
+- #[local] resources are locally accessible to a specific task, meaning that only that task can access the resource and does so without locks or critical sections.
+- #[shared] resources can only be accessed by a critical section (`lock`). Whoever has it, cann access the the ressource. Locks are given by priority of the interrupt handlers
+
+```rust
+#[rtic::app(device = stm32f4xx_hal::pac)]
+mod app {
+    use rtic::Mutex;
+
+    #[shared]
+    struct Shared {
+        counter: u32,
+    }
+
+    #[local]
+    struct Local {}
+
+    #[init]
+    fn init(ctx: init::Context) -> (Shared, Local) {
+        // Initialize hardware and return resources
+        (Shared { counter: 0 }, Local {})
+    }
+
+    #[task(priority = 1, shared = [counter])]
+    async fn task1(mut ctx: task1::Context) {
+        ctx.shared.counter.lock(|c| *c += 1);
+    }
+
+    #[task(binds = EXTI0, priority = 2, shared = [counter])]
+    fn hardware_task(mut ctx: hardware_task::Context) {
+        ctx.shared.counter.lock(|c| *c += 10);
+    }
+}
+```

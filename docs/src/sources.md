@@ -5,3 +5,4 @@ Usesfull resources:
 - [defmt book](https://defmt.ferrous-systems.com/)
 - [Discovery: Discover the Microcontrollers through Rust](https://docs.rust-embedded.org/discovery/microbit/index.html)
 - [Embassy Book](https://embassy.dev/book)
+- [RTIC](https://rtic.rs/2/book/en/preface.html)
