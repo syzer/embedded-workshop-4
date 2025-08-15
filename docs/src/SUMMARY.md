@@ -9,5 +9,3 @@
 - [Let's write an embassy project: I2C IMU](i2c-imu.md)
 - [Great Crates for embedded development](great-crates-for-embedded-development.md)
 - [Sources](sources.md)
-
-- [Example Chapter Mini Exercises](example-chapter-mini-exercises.md)
