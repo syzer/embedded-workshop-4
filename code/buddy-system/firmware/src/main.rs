@@ -8,8 +8,8 @@ use embassy_time::{Duration, Timer};
 use esp_hal::{
     gpio::{Input, InputConfig, Pull},
     timer::systimer::SystemTimer,
-    usb_serial_jtag::UsbSerialJtag,
-    Config,
+    usb_serial_jtag::{UsbSerialJtag, UsbSerialJtagTx},
+    Blocking, Config,
 };
 use esp_hal_embassy::main;
 use heapless::Vec;
@@ -26,7 +26,7 @@ async fn main(_spawner: Spawner) {
     info!("buddy");
 
     let usb_serial = UsbSerialJtag::new(peripherals.USB_DEVICE);
-    let (mut tusb_rx, mut usb_tx) = usb_serial.split();
+    let (mut _usb_rx, mut usb_tx) = usb_serial.split();
 
     let config = InputConfig::default().with_pull(Pull::Up);
     let button = Input::new(peripherals.GPIO9, config);
@@ -37,17 +37,21 @@ async fn main(_spawner: Spawner) {
             // button pressed
             info!("button pressed");
             button_state = true;
-
-            let message: Vec<u8, 128> = postcard::to_vec_cobs(&Message::Button(button_state))
-                .expect("Couldn't serialize button state");
-            _ = usb_tx.write(&message);
-            _ = usb_tx.flush_tx();
+            send_state(&mut usb_tx, button_state);
         } else if button_state && button.is_high() {
             // button released
             info!("button released");
             button_state = false;
+            send_state(&mut usb_tx, button_state);
         }
 
         Timer::after(Duration::from_millis(10)).await;
     }
+}
+
+fn send_state(usb_tx: &mut UsbSerialJtagTx<Blocking>, state: bool) {
+    let message: Vec<u8, 128> =
+        postcard::to_vec_cobs(&Message::Button(state)).expect("Couldn't serialize button state");
+    _ = usb_tx.write(&message);
+    _ = usb_tx.flush_tx();
 }
