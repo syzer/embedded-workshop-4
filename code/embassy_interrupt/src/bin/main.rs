@@ -13,7 +13,8 @@ use esp_hal::gpio::{Input, InputConfig, Pull};
 use esp_hal::timer::systimer::SystemTimer;
 
 #[panic_handler]
-fn panic(_: &core::panic::PanicInfo) -> ! {
+fn panic(info: &core::panic::PanicInfo) -> ! {
+    defmt::error!("panic: {}", defmt::Debug2Format(info));
     loop {}
 }
 
