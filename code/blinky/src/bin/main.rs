@@ -6,6 +6,7 @@
     holding buffers for the duration of a data transfer."
 )]
 
+use defmt::info;
 use esp_hal::clock::CpuClock;
 use esp_hal::gpio::{Level, Output, OutputConfig};
 use esp_hal::main;
@@ -32,12 +33,22 @@ fn main() -> ! {
 
     // GPIO 10 is labeled D10 on the Seed Xiao board
     let mut led = Output::new(peripherals.GPIO10, Level::Low, OutputConfig::default());
+    let mut led2 = Output::new(peripherals.GPIO9, Level::Low, OutputConfig::default());
+    let mut led3 = Output::new(peripherals.GPIO8, Level::Low, OutputConfig::default());
 
     loop {
         led.set_high();
         sleep(500);
+        info!(".");
+        led2.set_high();
+        sleep(500);
+        led3.set_high();
+
 
         led.set_low();
         sleep(500);
+        led2.set_low();
+        sleep(500);
+        led3.set_low();
     }
 }
