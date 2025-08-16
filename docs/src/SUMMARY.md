@@ -7,6 +7,7 @@
 - [Let's detect a button press](let-s-detect-a-button-press.md)
 - [Key Concepts of embassy](key-concepts-of-embassy.md)
 - [Let's write an embassy project: I2C IMU](i2c-imu.md)
+- [Let's write an embassy project: buddy system](buddy-system.md)
 - [Great Crates for embedded development](great-crates-for-embedded-development.md)
 - [More I2C sensor projecs](more-i2c.md)
 - [Sources](sources.md)
