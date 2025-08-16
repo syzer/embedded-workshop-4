@@ -43,9 +43,9 @@ Build and flashing
 cargo run --release
 ```
 
-## What is iˆ2c?
+## What is I2C?
 
-Serial Protocol to transfer data. Needs two signals: `SDA` and `SCL` (Serial Data and Serial Clock). Together they build an AND and transfer data between a start signal (S) and a stop signal (P)
+Serial Protocol to transfer data. Needs two signals: `SDA` and `SCL` (Serial Data and Serial Clock). Together they build and transfer data between a start signal (S) and a stop signal (P)
 
 To show the data transfer, we can use a diagram.
 
@@ -69,9 +69,9 @@ More info to i2c you can find [at Wikipedia](https://en.wikipedia.org/wiki/I%C2%
 
 ## How to wire i2c with the ESP32
 
-Important are the pull-up resistors (4.7kOhm), that you need to hook up to the SDA (serial data) and SCL (serial clock) pins to the ESP32's 3.3V power supply.
-
 ![ESP32 I2C Wiring](assets/wiring_imu.png)
+
+(Note that  the two pull-up registers in this diagram are very likely redundant since almost all I2C breakout board include them already.)
 
 ## Finding a driver for given IMU
 
